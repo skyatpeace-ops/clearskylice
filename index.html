@@ -3,78 +3,101 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="In-home head lice screening and manual removal in Austin and surrounding communities. View pricing or text to schedule.">
-  <title>Clear Sky Lice Relief | In-home head lice removal in Austin</title>
+  <meta name="description" content="Request in-home head lice screening or removal in Austin and nearby communities. Flat-rate treatment and no booking deposit.">
+  <title>Clear Sky Lice Relief | In-home lice removal in Austin</title>
   <link rel="stylesheet" href="site.css">
+  <script src="appointment.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header><div class="wrap bar">
-    <a class="brand" href="index.html">Clear Sky Lice Relief</a>
-    <nav aria-label="Main navigation"><a href="#pricing">Pricing</a><a href="#service-area">Service area</a><a href="terms/index.html">Terms</a></nav>
+  <header class="site-header"><div class="wrap bar">
+    <a class="brand" href="./">Clear Sky Lice Relief</a>
+    <nav aria-label="Main navigation">
+      <a href="./" aria-current="page">Home</a><a href="about.html">About</a>
+      <a class="button small" href="sms:+15125634162">Text now</a>
+    </nav>
   </div></header>
-<main id="main">
-  <div class="hero"><div class="wrap">
-    <h1>In-home head lice removal in Austin</h1>
-    <p class="lead">We come to your home to screen for head lice and manually remove lice and eggs when treatment is needed.</p>
-    <div class="actions">
-  <a class="button primary" href="sms:+15125634162?body=Hi%21%20I%E2%80%99m%20in%20ZIP%20code%20_____%20and%20would%20like%20to%20check%20availability%20for%20an%20in-home%20lice%20screening.">Text to schedule</a>
-  <a class="button" href="tel:+15125634162">Call (512) 563-4162</a>
-</div>
-  </div></div>
-
-  <div class="wrap">
-    <section id="visit">
-      <h2>How a visit works</h2>
-      <ol>
-        <li>Text or call with your ZIP code to check availability. To confirm your appointment, you’ll accept the service agreement electronically, pay a $50 deposit, and provide a card through our secure payment processor before dispatch.</li>
-        <li>Have everyone in your household available for screening if you’d like to qualify for the seven-day limited guarantee.</li>
-        <li>We recommend treatment for anyone we find has active head lice and provide written aftercare instructions.</li>
-      </ol>
-      <div class="panel">
-        <h3>Seven-day limited guarantee</h3>
-        <p>If you find a live crawling head louse within seven calendar days, call or text us within that period. Eligible households receive one complimentary follow-up inspection and one complimentary corrective treatment if we confirm live head lice.</p>
-        <p>Eligibility depends on household screening, completion of recommended treatment, and following aftercare instructions. <a href="terms/index.html#section-17">Read the full guarantee conditions</a>.</p>
+  <main id="main">
+    <div class="intro">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>In-home head lice removal</h1>
+          <p class="lead">We come to your home to check for head lice and manually remove lice and eggs when treatment is needed.</p>
+          <p class="area">Serving Austin, Westlake, Bee Cave, Driftwood, Dripping Springs, and Lakeway.</p>
+          <div class="actions">
+            <a class="button primary" href="sms:+15125634162">Text now</a>
+            <a href="#appointment">Request a visit</a>
+          </div>
+        </div>
+        <section class="booking" id="appointment" aria-labelledby="appointment-title">
+          <h2 id="appointment-title">Request an appointment</h2>
+          <p>We’ll text you to confirm availability. No deposit required.</p>
+      <form class="appointment-form" action="https://formspree.io/f/xeaglynb" method="POST" hidden>
+        <div class="grid">
+          <label>Service needed
+            <select name="service" required>
+              <option value="">Choose a service</option>
+              <option value="Lice removal">Lice removal</option>
+              <option value="Lice screening">Lice screening</option>
+            </select>
+          </label>
+          <label>Your name
+            <input name="name" autocomplete="name" maxlength="100" required>
+          </label>
+          <label>Mobile number
+            <input type="tel" name="phone" autocomplete="tel" maxlength="30" required>
+          </label>
+          <label>ZIP code
+            <input name="zip" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" title="Enter a five-digit ZIP code" required>
+          </label>
+          <label>How many people need to be checked?
+            <input type="number" name="people" min="1" step="1" required>
+          </label>
+          <label>Preferred date (optional)
+            <input type="date" name="preferred_date">
+          </label>
+          <label>Preferred time
+            <select name="preferred_time">
+              <option>As soon as possible</option>
+              <option>Morning</option>
+              <option>Afternoon</option>
+              <option>Evening</option>
+              <option>Any time</option>
+            </select>
+          </label>
+        </div>
+        <button class="button primary" type="submit">Request an appointment</button>
+        <p class="appointment-status" role="status"></p>
+      </form>
+          <p class="booking-help">Prefer to text? <a href="sms:+15125634162">(512) 563-4162</a></p>
+        </section>
+      </div>
+    </div>
+    <section class="wrap pricing" id="pricing" aria-labelledby="pricing-title">
+      <h2 id="pricing-title">Pricing</h2>
+      <div class="price-grid">
+        <article>
+          <h3>In-home lice removal</h3>
+          <p class="price">$150 <span>per person treated</span></p>
+          <p>Flat rate. Household screening is included when anyone receives treatment.</p>
+        </article>
+        <article>
+          <h3>In-home screening</h3>
+          <p class="price">$100 <span>per household visit</span></p>
+          <p>Applies when no lice are found.</p>
+        </article>
       </div>
     </section>
-
-    <section id="pricing">
-      <h2>Pricing</h2>
-      <div class="grid">
-        <div class="panel">
-          <h3>$150 per hour</h3>
-          <p>Screening and treatment both count toward billable time. There’s a one-hour minimum once service begins. After the first hour, additional time is billed in 15-minute increments at $37.50 per increment, rounded up to the next increment.</p>
-        </div>
-        <div class="panel">
-          <h3>$50 booking deposit</h3>
-          <p>The deposit confirms your appointment and is credited toward your final bill once service begins.</p>
-        </div>
+    <section class="follow-up" aria-labelledby="guarantee-title">
+      <div class="wrap follow-up-inner">
+        <h2 id="guarantee-title">30-day limited guarantee</h2>
+        <p>If you find live lice within 30 days of treatment, text us to arrange a recheck. Eligible households receive a follow-up inspection and corrective treatment if we confirm live lice. Eligibility depends on household screening, treatment of everyone found to have lice, and following the written aftercare instructions. We share the service agreement and guarantee details before confirming your appointment.</p>
       </div>
-      <p>A screening-only visit completed within an hour costs $150, with $100 due after the deposit. A three-hour visit costs $450, with $400 due after the deposit. Both examples are before any separately approved charges.</p>
-      <p>You can set a spending limit before service begins.</p>
     </section>
-
-    <section id="service-area">
-      <h2>Service area</h2>
-      <p>We serve Austin, Westlake, Bee Cave, Driftwood, Dripping Springs, and Lakeway.</p>
-      <p>Appointments outside this area may be available. We’ll disclose any travel surcharge for your approval before booking. Text us your ZIP code to check.</p>
-      <div class="actions">
-  <a class="button primary" href="sms:+15125634162?body=Hi%21%20I%E2%80%99m%20in%20ZIP%20code%20_____%20and%20would%20like%20to%20check%20availability%20for%20an%20in-home%20lice%20screening.">Text to schedule</a>
-  <a class="button" href="tel:+15125634162">Call (512) 563-4162</a>
-</div>
-    </section>
-
-    <section id="about">
-      <h2>Meet Skyler</h2>
-      <!-- Add Skyler’s photo here when available. -->
-      <p>Skyler Passino was born in Austin and raised in Dripping Springs. He’s a father of two toddlers and a regular at Barton Springs Pool.</p>
-    </section>
-  </div>
-</main>
+  </main>
   <footer><div class="wrap bar">
     <small>Clear Sky Lice Relief is a DBA of Barton Creek Family Services LLC.</small>
-    <a href="tel:+15125634162">(512) 563-4162</a>
-    <a href="terms/index.html">Terms &amp; Conditions</a>
+    <a href="sms:+15125634162">(512) 563-4162</a>
   </div></footer>
 </body>
 </html>
